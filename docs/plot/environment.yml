@@ -12,3 +12,5 @@ dependencies:
   - libtiff
   - sqlite
   - compilers
+  - cmake
+  - ninja
