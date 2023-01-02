@@ -10,13 +10,8 @@ build:
   tools:
     python: "3.10"
   jobs:
-    pre_install: |
-      mkdir build
-      cd build
-      cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=OFF -DCMAKE_INSTALL_PREFIX=/opt/proj ..
-      make -j$(nproc)
-      sudo mkdir -p /opt/proj
-      sudo make install
+    pre_install:
+      - ./docs/pre_install.sh
 
     pre_build:
       - cd docs && mkdir -p build && doxygen Doxyfile
@@ -24,14 +19,6 @@ build:
 
   apt_packages:
     - graphviz
-    - cmake
-    - g++
-    - sqlite3
-    - pkg-config
-    - libsqlite3-dev
-    - libtiff-dev
-    - libcurl4-openssl-dev
-
 
 conda:
   environment: docs/plot/environment.yml
