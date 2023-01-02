@@ -10,10 +10,9 @@ build:
   tools:
     python: "3.10"
   jobs:
-    pre_install:
-      - ./docs/pre_install.sh
 
     pre_build:
+      - ./docs/pre_install.sh
       - cd docs && mkdir -p build && doxygen Doxyfile
       - cd docs && plot.py plotdefs.json images/
 
