@@ -14,8 +14,9 @@ build:
 
     pre_build:
       - ./docs/pre_install.sh
-      - cd docs && mkdir -p build && doxygen Doxyfile
-      - cd docs && plot.py plotdefs.json images/
+      - mkdir -p docs/build
+      - doxygen Doxyfile
+      - ./docs/plot.sh
 
   apt_packages:
     - graphviz
