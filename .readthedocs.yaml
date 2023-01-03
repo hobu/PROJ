@@ -13,7 +13,7 @@ build:
   jobs:
 
     pre_build:
-      - ./docs/pre_install.sh
+      - ./docs/rtd/pre_build.sh
       - mkdir -p docs/build
       - doxygen Doxyfile
       - ./docs/plot.sh
@@ -27,7 +27,7 @@ formats:
 
 
 conda:
-  environment: docs/plot/environment.yml
+  environment: docs/environment.yml
 
 sphinx:
   builder: html

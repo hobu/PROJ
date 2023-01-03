@@ -1,7 +1,7 @@
 #!/bin/sh
 #
 
-CONDA_PREFIX="/home/docs/checkouts/readthedocs.org/user_builds/proj-local/conda/$READTHEDOCS_VERSION"
+CONDA_PREFIX="/home/docs/checkouts/readthedocs.org/user_builds/$READTHEDOCS_PROJECT/conda/$READTHEDOCS_VERSION"
 
 export PATH="$CONDA_PREFIX/bin:$PATH"
 export PROJ_DATA="$CONDA_PREFIX/share/proj"
