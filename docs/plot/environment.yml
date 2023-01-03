@@ -1,4 +1,4 @@
-name: rtd
+name: rtd-env
 channels:
   - conda-forge
 dependencies:
